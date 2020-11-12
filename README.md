@@ -1,4 +1,4 @@
-# Dataset 📱
+# Dataset 📊
 
 A dataset consisting of various parameters to predict the price score/range of a mobile phone based on certain inputs such as following:
 - id:ID
