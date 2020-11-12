@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>📱 Mobile Price Score</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap" rel="stylesheet">  
+    </head>
+    <body>
+
+        <header class="text-center">
+            <h1 class="mt-4">📱 Mobile Price Score Predictor</h1>
+        </header>
+
+        <div class="container mt-5 mx-2">
+            <form class="data" action="{{ url_for('predict') }}" method="POST">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="">Battery Power 🔋 (mAh)</label>
+                                <input class="form-control m-auto d" type="text" name="Battery"/>   
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="">Front-Cam Megapixel 🤳</label>
+                                <input class="form-control m-auto d" type="text" name="cam"/>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-sm-6">
+                                <label class="">Internal Memory 🤖 (GB)</label>
+                                <input class="form-control m-auto d" type="text" name="memory"/>   
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="">Mobile weight 🏋️</label>
+                                <input class="form-control m-auto d" type="text" name="mwt"/>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-sm-6">
+                                <label class="">Pixel Resolution Height 📱</label>
+                                <input class="form-control m-auto d" type="text" name="prh"/>   
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="">Pixel Resolution Width 📱</label>
+                                <input class="form-control m-auto d" type="text" name="prw"/>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-sm-6">
+                                <label class="">RAM 💽</label>
+                                <input class="form-control m-auto d" type="text" name="ram"/>   
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="">Screen Height 🎦 (cm)</label>
+                                <input class="form-control m-auto d" type="text" name="sh"/>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-sm-6">
+                                <label class="">Screen Width 🎦 (cm)</label>
+                                <input class="form-control m-auto d" type="text" name="sw"/>   
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="">Talk Time 🗣️</label>
+                                <input class="form-control m-auto d" type="text" name="tt"/>
+                            </div>
+                        </div>
+                        <div class="row mt-4 mb-4 pred">
+                            <button type="submit" class="btn btn-secondary btn-lg">Predict 🔮</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        
+                    </div>
+                </div>
+            </form>
+            <div mt-4>
+                <h2 style="font-family: 'Ubuntu Mono', monospace; margin-left: 75px;">{{ prediction_text }}</h2>
+            </div>
+        </div>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
